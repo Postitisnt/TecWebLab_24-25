@@ -1,0 +1,76 @@
+swagger: '2.0'
+info:
+  version: 0.0.1
+  title: 'Esercizio Botanica'
+  description: 'API per gestire un blog di botanica'
+schemes:
+  - http
+  - https
+
+paths:
+  /articoli/:
+    get:
+      description: "Ottenere l'elenco di tutti gli articoli."
+      parameters:
+        - name: mindata
+          in: query
+          description: "minimum data degli articoli"
+        - name: categoria
+          in: query
+          description: "Categoria degli articoli"
+          type: string
+      responses:
+        200:
+          description: 'successo'
+          schema:
+              $ref: '#/definitions/Articolo'
+        400:
+          description: 'Errore richiesta'
+    post:
+      description: 'Aggiungere un nuovo articolo'
+      operationId: 'aggiungiArticolo'
+      parameters:
+        - name: articolo
+          in: body
+          description: 'articolo da aggiungere'
+          required: true
+          schema:
+            $ref: '#/definitions/Articolo'
+      responses:
+        200:
+          description: 'succeso'
+  /articoli/{articoloID}/:
+    put:
+      description: 'aggiornare un articolo'
+      operationId: 'aggiornaArticolo'
+      parameters:
+        - name: articoloID
+          description: 'articolo da aggiornare'
+          type: integer
+          in: path
+          required: true
+      responses:
+        200:
+          description: 'successo - articolo aggiornato'
+        400:
+          description: 'errore, ID non valido'
+
+definitions:
+ Articolo:
+  type: object
+  properties:
+    id:
+      type: integer
+      minimum: 0
+    data:
+      type: string
+      example: '06/03/2022'
+    titolo:
+      type: string
+      example: 'Le fiori invernali'
+    contenuto:
+      type: string
+      example: "L'inverno ci porta delle fiori belle..."
+    categoria:
+      type: string
+      example: 'orto'
