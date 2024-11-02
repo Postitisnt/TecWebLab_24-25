@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: flex;
+    flex-direction: row; /* Utilizziamo row e facciamo andare a capo gli elementi */
+    gap: 10px; /* Crea lo spazio sulla terza riga, tra area C e D */
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 50vh;
+    row-gap: 0px;
+    padding: 0 5px; /* verticale (top, bottom) - orizzontale (left, right) */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra orizzontalmente */
+    font-family: Verdana;
+}
+
+/* Stile comune per tutti i div */
+#main div {
+    background-color: #cccccc;
+    height: calc(50vh/3 - 5px);
+    color: #000;
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    margin: 5px 0; /* Margine per creare spazio tra i div in verticale */
+    /* Qui sopra non utilizziamo gap perché avendo impostato la direction su row perderemmo gli spazi tra elementi incolonnati */
+}
+
+/* Stile per i div che devono occupare tutta la larghezza */
+#a, #b, #e {
+    width: calc(100vw - 10px); /* sottrae il padding da 100vw */
+}
+
+/* Stile per i div che devono occupare metà della larghezza */
+#c, #d {
+    width: calc(50vw - 10px); /* sottrae il padding */
+}
+
+/* Nasconde l'elemento #e come da richiesta */
+#e {
+    display: none !important;
+}
+
+
+/* Ogni div piccolo deve essere allineato rispetto al suo container, quindi usiamo justify-content */
+#c {
+    justify-content: left;
+}
+
+#d {
+    justify-content: right;
+}

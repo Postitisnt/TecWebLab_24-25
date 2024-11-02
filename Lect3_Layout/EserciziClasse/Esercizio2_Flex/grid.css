@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* crea una griglia con 2 colonne uguali */
+    gap: 10px; /* aggiunge uno spazio tra le celle della griglia */
+    width: 100vw;
+    height: 50vh;
+    padding: 5px; 
+    font-family: Verdana;
+}
+
+/* Stile comune per tutti i div */
+#main div {
+    background-color: #cccccc;
+    color: #000;
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+}
+
+/*
+La proprietà grid-area nel CSS può essere usata per posizionare un elemento in un'area 
+specifica della griglia, e quando viene usata con quattro valori si riferisce rispettivamente 
+a:   grid-row-start, grid-column-start, grid-row-end, e grid-column-end.
+*/
+#a {
+    grid-area: 1 / 1 / 2 / 3; /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+}
+
+#b {
+    grid-area: 2 / 1 / 2 / 3; 
+}
+
+#c {
+    grid-area: 3 / 1 / 4 / 2; 
+}
+
+#d {
+    grid-area: 3 / 2 / 4 / 3; 
+}
+
+#e {
+    display: none !important;
+}

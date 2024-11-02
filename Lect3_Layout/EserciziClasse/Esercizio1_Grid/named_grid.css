@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+  
+#main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quattro colonne */
+    grid-gap: 10px; /* Spazio tra le griglie */
+    width: 100vw;
+    max-width: 100vw;
+    padding: 5px;
+    height: 50vh;
+    font-family: Verdana;
+    /* Serve a definire il layout usando named grid areas */
+    grid-template-areas:
+      "a a b b"
+      "c d d d"
+      "e e e e";
+}
+
+#main div { 
+    background-color: #cc0000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#main div p {
+    margin: 0 15px;
+}
+
+#a {
+    grid-area: a; /* Assegna l'area 'a' */
+    justify-content: left; /* Allinea il testo a sinistra */
+}
+
+#b {
+    grid-area: b; /* Assegna l'area 'b' */
+    justify-content: right; /* Allinea il testo a destra */
+}
+
+#c {
+    grid-area: c; /* Assegna l'area 'c' */
+    justify-content: left; /* Allinea il testo a sinistra */
+}
+
+#d {
+    grid-area: d; /* Assegna l'area 'd' */
+    justify-content: right; /* Allinea il testo a destra */
+}
+
+#e {
+    grid-area: e; /* Assegna l'area 'e' */
+    justify-content: center; /* Centra il testo */
+}
