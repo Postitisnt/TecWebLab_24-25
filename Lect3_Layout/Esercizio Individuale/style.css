@@ -1,0 +1,199 @@
+/* General Styles */
+* {
+    box-sizing: border-box; /* Considera anche padding e border nelle dimensioni di width ed height, 
+    rendendo il layout più prevedibile e i calcoli più semplici. Serve ad evitare la fuoriuscita 
+    degli elementi dal loro container quando si aggiungono bordi o margini interni. */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh; /* L'altezza del body occupa almeno l'intera altezza della viewport */
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Spaziatura tra le linee del testo per una migliore leggibilità */
+    display: flex;
+    flex-direction: column; /* Disposizione degli elementi interni in colonna */
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex; /* Layout flex per posizionare logo e menu in una riga */
+    justify-content: space-between; /* Spaziatura tra logo e menu */
+    align-items: center; /* Allinea verticalmente al centro */
+    background-color: #2c2f48;
+    color: #ffffff;
+    padding: 20px 40px; /* Spaziatura interna dell'header */
+    flex-shrink: 0; /* Evita che l'header si ridimensioni */
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none; /* Rimuove i bullet points dalla lista */
+    display: flex; /* Disposizione dei link di navigazione in orizzontale */
+}
+
+nav ul li {
+    margin-left: 20px; /* Spaziatura tra i link di navigazione */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    font-weight: 500;
+    transition: color 0.3s; /* Transizione morbida del colore in hover */
+}
+
+nav ul li a:hover {
+    color: #a0c4ff;
+}
+
+/* Main Content Styles */
+main {
+    display: flex; /* Layout flessibile per affiancare articolo e sidebar */
+    flex: 1 0 auto; /* Occupa lo spazio rimanente della pagina */
+    margin: 20px 40px; /* Margini laterali del contenuto principale */
+    gap: 20px; /* Spaziatura tra articolo e sidebar */
+}
+
+article {
+    flex: 2; /* Articolo più largo rispetto alla sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra il contenuto all'interno dell'articolo */
+    text-align: center; /* Centra il testo per un aspetto equilibrato */
+}
+
+article h1 {
+    margin-bottom: 20px; /* Spaziatura inferiore per il titolo */
+    color: #2c2f48;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+article img {
+    width: 80%; /* Riduce leggermente la larghezza dell'immagine */
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 12px; /* Arrotonda gli angoli dell'immagine */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombra leggera per dare profondità */
+}
+
+article p {
+    max-width: 100%;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify; /* Giustifica il testo per occupare tutta la larghezza */
+}
+
+/* Sidebar Styles */
+aside {
+    flex: 1; /* Sidebar più stretta rispetto all'articolo */
+    background-color: #f8f9fc;
+    border: 1px solid #e0e4e8;
+    border-radius: 8px;
+    padding: 20px; /* Spaziatura interna della sidebar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Ombra morbida per dare rilievo */
+    align-items: center;
+    text-align: center;
+}
+
+aside h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c2f48;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 15px; /* Spaziatura tra i bottoni della sidebar */
+}
+
+aside ul li a {
+    display: block; /* Trasforma ogni link in un blocco per sembrare un bottone */
+    padding: 10px; /* Spaziatura interna per il bottone */
+    color: #2c2f48;
+    background-color: #e0e4e8;
+    border: 2px solid #2c2f48;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s; /* Transizione morbida per hover */
+}
+
+aside ul li a:hover {
+    background-color: #a0c4ff;
+    color: #fff;
+}
+
+/* Footer Styles */
+footer {
+    height: 5vh; /* Altezza del footer fissata al 5% dell'altezza della viewport */
+    display: flex;
+    justify-content: space-between; /* Spaziatura tra contatti e social media */
+    align-items: center; /* Allinea verticalmente al centro */
+    background-color: #2c2f48;
+    color: #ffffff;
+    padding: 20px 40px;
+    flex-shrink: 0; /* Evita il ridimensionamento */
+}
+
+footer .contact-info {
+    font-size: 14px;
+}
+
+footer .social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px; /* Spaziatura tra i link dei social media */
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #a0c4ff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header, footer {
+        flex-direction: column; /* Disposizione verticale per schermi piccoli */
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column; /* Disposizione verticale del main per schermi piccoli */
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        min-height: 10vh;
+    }
+
+    footer .social-media a {
+        margin: 0 10px;
+    }
+}
