@@ -1,0 +1,37 @@
+body {
+    background-color: #FFFFEE;
+    column-count: 2;
+    column-rule-style: solid;
+    margin: 60px;
+    text-align: justify;
+    font-family: 'Book Antiqua';
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+#sec1 p:first-letter {
+    color: red;
+    font-size: 75px;
+    line-height: 52px;
+    font-family: Georgia;
+}
+
+p {
+    margin-bottom: 30px;
+}
+
+section {
+    padding: 20px;
+    /*break-inside: avoid;*/
+}
+
+ol li:nth-child(odd) {
+    background: gray;
+}
+
+ol li:nth-child(even) {
+    background: lightgray;
+}
+

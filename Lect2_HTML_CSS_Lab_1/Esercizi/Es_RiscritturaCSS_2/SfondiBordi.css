@@ -1,0 +1,24 @@
+body {
+    font-family: 'Courier New';
+    padding: 10px;
+}
+
+#sec1 {
+    background-color: lightgray;
+    text-align: justify;
+}
+
+a {
+    background-color: red;
+    font-size: 150%;
+}
+
+ol {
+    font-style: italic;
+    border: 3px dashed blue;
+}
+
+h1 {
+    text-align: center;
+}
+

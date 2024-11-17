@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana;
+}
+
+h1, h2, h3 {
+    background-color: #D3D3D3;
+    font-style: italic;
+    text-align: right;
+}
+
+span.commodo {
+    font-weight: bold;
+    letter-spacing: 20px;
+    background-color: red;
+    font-size: 125%;
+}
+
+span {
+    background-color: yellow;
+}
+

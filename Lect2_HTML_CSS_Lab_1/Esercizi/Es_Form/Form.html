@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio Form - Correzione</title>>
+    <meta name="keywords" content="HTML, Web, Form">
+    <meta name="author" content="Lorenzo Paolini">
+    <link rel="stylesheet" href="StileForm.css">
+</head>
+<body>
+
+<div class="survey-container">
+    <form action="/path-to-server-endpoint" method="post">
+
+    <div class="Specs">
+        <p>Rispondi alle seguenti domande e clicca su <span id="BoldTxt">Invia</span> per spedire i risultati.</p>
+        <!--
+            L'utilizzo dell'ID in questo caso (al posto della class) è per scopi dimostrativi.
+            Tendenzialmente si utilizza un ID per indicare un elemento unico, dunque che non
+            si ripete all'interno del documento (o se si ripete avrà ID diverso, e di conseguenza,
+            si suppone, attributi diversi).
+
+            In questo caso, è vero che "Invia" è l'unica parola in grassetto, ma potrebbe capitare
+            di volerne altre più avanti. Dunque, per proprietà "comuni" sarebbe meglio comunque
+            l'utilizzo di class.
+        -->
+    </div>
+
+    <ol>
+        <li>
+            <div class="question">
+                <p>Quali tra queste aree di ricerca interessavano Leonardo (possibile scegliere anche più di una risposta)?</p>
+                <ol type="a">
+                    <li>
+                        <label><input type="checkbox" name="interests" value="math"> Matematica</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="interests" value="physics"> Fisica</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" name="interests" value="numismatics"> Numismatica</label>
+                    </li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class="question">
+                <span>Chi ha inventato il telefono?</span> 
+                <!-- 
+                    Attenzione - Sopra non utilizziamo p perché impone la creazione di una nuova riga (a capo), 
+                    dunque non saremmo in grado di posizionare il menu a tendina di fianco alla domanda (come
+                    mostrato in foto). 
+                    [Questo è valido al momento, quando vedrete il layout sarà tutto più semplice]
+                -->
+                <select name="inventor">
+                    <option selected value="marconi">Marconi</option>
+                    <option value="meucci">Meucci</option>
+                    <option value="bell">Bell</option>
+                    <option value="gray">Gray</option>
+                </select>
+            </div>
+        </li>
+    </ol>
+
+
+    <div class="submit-buttons">
+        <button type="submit">Invia</button>
+        <button type="button" onclick="location.reload();">Annulla</button>
+        <!-- 
+            L'attributo onclick in HTML viene utilizzato per definire una funzione 
+            JavaScript che verrà eseguita quando l'utente clicca su un elemento.
+
+            In questo caso: indica al browser di eseguire il metodo "reload()" dell'oggetto
+            "location" quando l'elemento viene cliccato.
+
+                - L'oggetto location è parte dell'API del browser e rappresenta l'URL 
+            corrente della finestra del browser. 
+                - Il metodo reload() ricarica la pagina corrente 
+        -->
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>

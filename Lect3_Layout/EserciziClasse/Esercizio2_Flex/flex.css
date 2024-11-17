@@ -24,13 +24,14 @@ body, html {
 /* Stile comune per tutti i div */
 #main div {
     background-color: #cccccc;
-    height: calc(50vh/3 - 5px);
+    height: calc(50vh/3);
     color: #000;
     display: flex;
     align-items: center; /* Centra il contenuto verticalmente */
     justify-content: center; /* Centra il contenuto orizzontalmente */
     margin: 5px 0; /* Margine per creare spazio tra i div in verticale */
-    /* Qui sopra non utilizziamo gap perché avendo impostato la direction su row perderemmo gli spazi tra elementi incolonnati */
+    /* Qui sopra non utilizziamo gap perché avendo impostato la direction 
+    su row perderemmo gli spazi tra elementi incolonnati */
 }
 
 /* Stile per i div che devono occupare tutta la larghezza */
@@ -46,14 +47,4 @@ body, html {
 /* Nasconde l'elemento #e come da richiesta */
 #e {
     display: none !important;
-}
-
-
-/* Ogni div piccolo deve essere allineato rispetto al suo container, quindi usiamo justify-content */
-#c {
-    justify-content: left;
-}
-
-#d {
-    justify-content: right;
 }

@@ -1,0 +1,24 @@
+.survey-container {
+    width: calc(100% - 60px); /* il -60px è dato dal padding destro e sinistro (30px e 30px) */
+    margin: 0 auto;
+    padding: 15px 30px; /* Padding alto/basso, e Padding destra/sinistra -- padding: [top] [right] [bottom] [left]; */
+    border: 1px solid black;
+    box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza */
+}
+
+.question {
+    margin-bottom: 2px;
+}
+
+.question p {
+    margin-bottom: 20px; /* Sovrascriviamo il margine che di default viene fornito al p */
+}
+
+.question ol {
+    margin-left: 15px;
+}
+
+#BoldTxt {
+    font-weight: bold;
+}
+  

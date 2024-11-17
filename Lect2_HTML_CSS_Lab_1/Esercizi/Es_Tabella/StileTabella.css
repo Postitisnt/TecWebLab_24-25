@@ -1,0 +1,36 @@
+/* Stile generale per la tabella */
+table {
+    width: 25%;
+    margin-left: auto; 
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: separate; /* Permette di avere spazi tra le celle */
+    border-spacing: 10px; /* Imposta lo spazio tra le celle */
+    text-align: center; 
+}
+
+td /* ,th */ {
+    border: 1px solid black;
+    padding: 5px; /* Imposta il padding all'interno delle celle */
+}
+
+.noCntr {
+    text-align: left;
+}
+
+.yellowBkg {
+    background-color: yellow;
+}
+
+.redBkg {
+    background-color: red;
+}
+
+.boldTxt {
+    font-weight: bold;
+}
+
+/* Evidenziare le righe pari in modo diverso */
+/*  tr:nth-child(even) td { /* Selettore per gli elementi td contenuti negli elementi tr pari */
+/*     background-color: #eee; 
+/*  }

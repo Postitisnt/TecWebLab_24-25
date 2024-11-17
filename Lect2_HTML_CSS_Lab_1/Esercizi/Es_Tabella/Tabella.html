@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio Tabella - Correzione</title>
+    <meta name="keywords" content="HTML, Web, Table">
+    <meta name="author" content="Lorenzo Paolini">
+    <!-- Collegamento al foglio di stile CSS esterno -->
+    <link rel="stylesheet" href="StileTabella.css">
+</head>
+<body>
+    <table cellpadding="5" cellspacing="0">
+        <caption>Tabella Dipendenti</caption>
+        <tr>
+            <td class="yellowBkg" rowspan="2" colspan="2"></td>
+            <td class="boldTxt" rowspan="2" colspan="3">Distribuzione</td>
+            <td class="boldTxt" colspan="3">Media</td>
+        </tr>
+        
+        <tr>
+            <td class="boldTxt" colspan="2">RAL</td>
+            <td class="redBkg boldTxt">Ore</td>
+        </tr>
+
+        <tr>
+            <td class="boldTxt yellowBkg" colspan="2">Manager</td>
+            <td class="boldTxt" colspan="3">2%</td>
+            <td colspan="2">100.000€</td>
+            <td class="noCntr redBkg">-</td>
+        </tr>
+
+        <tr>
+            <td class="boldTxt yellowBkg" colspan="2">Impiegati</td>
+            <td class="boldTxt" colspan="3">20%</td>
+            <td colspan="2">40.000€</td>
+            <td class="noCntr redBkg" rowspan="2">40</td>
+        </tr>
+
+        <tr>
+            <td class="boldTxt yellowBkg" colspan="2">Operai</td>
+            <td class="boldTxt" colspan="3">78%</td>
+            <td colspan="2">35.000€</td>
+        </tr>
+    </table>
+
+</body>
+</html>
