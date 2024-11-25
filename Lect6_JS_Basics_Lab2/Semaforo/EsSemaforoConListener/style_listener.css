@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#semaforo {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    width: 100px;
+    height: 300px;
+}
+
+.light {
+    border: solid 1px black;
+    border-radius: 100%;
+    background-color: white;
+    height: 100%;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#red {
+    background-color: red;
+}
+
+button {
+    margin-top: 10px;	
+}
