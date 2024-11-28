@@ -1,0 +1,133 @@
+/* Stile per font */
+.moulpali-regular {
+    font-family: "Moulpali", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Moulpali", sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 1% 0;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Usate 'row' per il layout orizzontale e 'column' per il verticale */
+    align-items: center; /* allinea gli elementi contenuti al centro */
+    gap: 20px; /* crea un pò di spazio tra gli elementi */
+    width: 100%;
+    max-width: 800px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */   /* Permette agli elementi di andare a capo */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    align-items: center;     /* Centra gli elementi verticalmente */
+    gap: 20px;               /* Distanza tra gli elementi */
+    width: 100%;
+    max-width: 700px;
+}
+
+#first-row, #second-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-around;  /* Distribuisce equamente lo spazio intorno agli elementi */
+    width: 100%;                    /* Assicura che la row occupi tutta la larghezza disponibile */
+}
+
+img {
+    border-radius: 10%;
+}
+
+.image-container {
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10%;
+    display: grid;
+    gap: 2px;
+    grid-template-rows: auto auto auto;  /* Dimensioni automatiche - ovvero tutto l'elemento entra per la sua dimensione */
+    grid-template-areas: 
+        "top"
+        "middle"
+        "bottom";
+    box-shadow: 10px 8px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title, .subtitle {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.top .title {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    grid-area: top; /* Assegna l'area 'top' */
+}
+
+.top .subtitle {
+    font-size: 18px;
+    letter-spacing: 1px;
+    grid-area: middle; /* Assegna l'area 'middle' */
+}
+
+.top img {
+    grid-area: bottom; /* Assegna l'area 'bottom' */
+}
+
+.center .title {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    grid-area: top;
+}
+
+.center .subtitle {
+    font-size: 18px;
+    letter-spacing: 1px;
+    grid-area: bottom;
+}
+
+.center img {
+    grid-area: middle;
+}
+
+.bottom .title {
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    grid-area: middle; 
+}
+
+.bottom .subtitle {
+    font-size: 18px;
+    letter-spacing: 1px;
+    grid-area: bottom;
+}
+
+.bottom img {
+    grid-area: top;
+}

@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body, html {
+    /* Sovrascriviamo margine e padding di default delle pagine HTML,
+    questo ci è utile quando agggiungiamo il padding con la dichiarazione del 
+    border-box. Infatti, senza sovrascrivere margin e padding, otterremo un 
+    contenuto inizialmente spostato a destra, con uno spazio a sinistra */
+    margin: 0;
+    padding: 0;
+}
+  
+#main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* quattro colonne, ognuna occupa una frazione dello spazio disponibile equamente suddiviso */
+    grid-gap: 10px; /* spazio tra le griglie - equivalente a gap */
+    width: 100vw; /* Stiamo dicendo di voler occupare tutta la larghezza del viewport*/
+    max-width: 100vw;
+    padding: 5px; 
+    height: 50vh;
+    /*margin: auto; */ /* centra il contenitore - non necessario quì percche gia occupiamo tutto lo spazio disponibile */
+    font-family: Verdana;
+}
+
+#main div { 
+    background-color: #cc0000;
+    color: #fff;
+    width: 100%; /* Ogni div occupa l'intero spazio concessogli */
+    display: flex; /* Aggiungere flex per organizzare il testo (p) dentro ai div */
+    align-items: center; /* Centra verticalmente il testo nel container */
+}
+
+#main div p {
+    margin: 0 15px;
+}
+  
+#a {
+    grid-column: 1 / span 2; /* da colonna 1, occupa due colonne */
+    grid-row: 1; /* prima riga */
+    justify-content: left;
+}
+  
+#b {
+    grid-column: 3 / span 2; /* da colonna 3, occupa due colonne */
+    grid-row: 1; /* prima riga */
+    justify-content: right;
+}
+  
+#c {
+    grid-column: 1; /* occupa solo la prima colonna */
+    grid-row: 2; /* seconda riga */
+    justify-content: left;
+}
+  
+#d {
+    grid-column: 2 / span 3; /* prende 3 colonne a partire da colonna 2 (compresa) */
+    grid-row: 2; /* terza riga */
+    justify-content: right;
+}
+  
+#e {
+    grid-column: 1 / 5; /* prende tutte le colonne */
+    grid-row: 3;
+    justify-content: center;
+}
+

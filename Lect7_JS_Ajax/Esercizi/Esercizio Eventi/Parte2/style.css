@@ -1,0 +1,58 @@
+body {
+	margin: 0px;
+}
+
+.title{
+	background-image: url('http://diiorio.nws.cs.unibo.it/twe/07.06.2022a/shows_events_bg.jpg');
+	background-size: cover;
+	width: 100vw;
+	height: auto;
+	padding: 100px 0px;
+}
+
+.title h1, .title p {
+	text-align: center;
+	color: white;
+}
+
+.evento.row{
+	background-color: white;
+	padding: 30px;
+	margin: 20px 40px;
+}
+
+h2, h4, p {
+	text-align: center;
+	font-family: "Courier";
+}
+
+h4 {
+	color: black !important;
+}
+
+.elenco h1 {
+	text-align: center;
+	padding: 30px 0px 50px 0px;
+}
+
+.elenco {
+	background-color: lightgray;
+	height: 100%;
+	padding-bottom: 100px;
+}
+
+.col-lg-3 {
+	text-align: center;	
+}
+
+.btn.btn-primary {
+	background-color: black;
+	border-color: black;
+	font-family: "Courier";
+	color: white;
+}
+
+.col-md-12.col-lg-3 a {
+	text-decoration: none;
+	color: white;
+}

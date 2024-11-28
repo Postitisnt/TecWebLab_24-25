@@ -1,0 +1,74 @@
+/* Reset generale */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Stile per il contenuto */
+h1, h2 {
+    color: #5D5C61;
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+}
+
+li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    font-size: 18px;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #77DD77;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #5CAB7D;
+}
+
+input[type="button"]:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed;
+}
+
+/* Contenitore della lista dei desideri */
+#containerProdotti {
+    margin: 20px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#containerProdotti p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+#containerProdotti p span {
+    font-weight: bold;
+}

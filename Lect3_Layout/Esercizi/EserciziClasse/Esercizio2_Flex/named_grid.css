@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: grid;
+    gap: 10px; 
+    width: 100vw;
+    height: 50vh;
+    padding: 5px; 
+    font-family: Verdana;
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c d";
+}
+
+/* Stile comune per tutti i div */
+#main div {
+    background-color: #cccccc;
+    color: #000;
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+}
+
+#a {
+    grid-area: a;
+}
+
+#b {
+    grid-area: b; 
+}
+
+#c {
+    grid-area: c; 
+}
+
+#d {
+    grid-area: d; 
+}
+
+#e {
+    display: none !important;
+}
